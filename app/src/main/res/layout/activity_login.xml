@@ -17,11 +17,11 @@
         android:fontFamily="sans-serif-medium"/>
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="textEmailAddress"/>
 
     <EditText
@@ -34,11 +34,32 @@
         android:inputType="textPassword"/>
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
         android:text="Login" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="Belum punya akun?"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/nav_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+    </LinearLayout>
 </LinearLayout>
