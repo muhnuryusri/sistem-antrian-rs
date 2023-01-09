@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "607582436601",
+    "firebase_url": "https://sistem-antrian-5e951-default-rtdb.firebaseio.com",
+    "project_id": "sistem-antrian-5e951",
+    "storage_bucket": "sistem-antrian-5e951.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607582436601:android:3b9853c9ecbdeffd403628",
+        "android_client_info": {
+          "package_name": "com.example.sistem_informasi_antrian_rumah_sakit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607582436601-8jcs0eatsm19mpahno10pbbusb1c7lhv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhMPSkkBpXa1kpgDrNT70G460kyXMnBkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607582436601-8jcs0eatsm19mpahno10pbbusb1c7lhv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
