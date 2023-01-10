@@ -1,11 +1,8 @@
 package com.example.sistem_informasi_antrian_rumah_sakit.model
 
-import java.util.LinkedList
-
-data class Queue (
-    var antrian: LinkedList<QueueList>,
-)
-
-data class QueueList (
-    var no: Int = 0
+data class Queue(
+    var id: String,
+    var idUser: String,
+    var no: Int? = 0,
+    var name: String,
 )
