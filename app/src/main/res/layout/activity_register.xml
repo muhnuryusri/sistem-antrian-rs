@@ -25,11 +25,11 @@
         android:inputType="textEmailAddress"/>
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Username"
+        android:hint="Nama Lengkap"
         android:inputType="textEmailAddress"/>
 
     <EditText
