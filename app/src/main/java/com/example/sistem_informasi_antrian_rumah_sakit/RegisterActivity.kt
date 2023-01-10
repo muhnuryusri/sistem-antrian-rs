@@ -25,15 +25,15 @@ class RegisterActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance().reference.child("Users")
 
         binding.btnRegister.setOnClickListener {
-            val id = database.push().key
+            val id = auth.currentUser?.uid
             val email = binding.email.text.toString()
-            val username = binding.username.text.toString()
+            val name = binding.name.text.toString()
             val password = binding.password.text.toString()
 
-            if (email.isEmpty() && username.isEmpty() && password.isEmpty()) {
+            if (email.isEmpty() && name.isEmpty() && password.isEmpty()) {
                 Toast.makeText(this@RegisterActivity, "Mohon lengkapi data anda", Toast.LENGTH_SHORT).show()
             } else {
-                val user = id?.let { it1 -> User(it1, email, username, password) }
+                val user = id?.let { it1 -> User(it1, email, name, password) }
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
