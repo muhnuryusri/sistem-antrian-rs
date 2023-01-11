@@ -52,6 +52,11 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+
+        binding.navLoginAdmin.setOnClickListener {
+            val intent = Intent(this, LoginAdminActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun updateUI(currentUser: FirebaseUser?) {
