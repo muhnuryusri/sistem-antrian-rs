@@ -25,20 +25,20 @@ class RegisterActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance().reference.child("Users")
 
         binding.btnRegister.setOnClickListener {
-            val id = auth.currentUser?.uid
-            val email = binding.email.text.toString()
             val name = binding.name.text.toString()
+            val email = binding.email.text.toString()
             val password = binding.password.text.toString()
 
             if (email.isEmpty() && name.isEmpty() && password.isEmpty()) {
                 Toast.makeText(this@RegisterActivity, "Mohon lengkapi data anda", Toast.LENGTH_SHORT).show()
             } else {
-                val user = id?.let { it1 -> User(it1, email, name, password) }
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
                             val userAuth = auth.currentUser
+                            val id = userAuth?.uid
+                            val user = id?.let { it1 -> User(it1, name, email, password) }
 
                             auth.uid?.let { it1 ->
                                 database.child(it1).setValue(user).addOnSuccessListener {
@@ -63,5 +63,6 @@ class RegisterActivity : AppCompatActivity() {
     private fun updateUI(currentUser: FirebaseUser?) {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        this.finish()
     }
 }
